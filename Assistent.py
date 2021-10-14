@@ -30,7 +30,6 @@ engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
 amName = -255
-#driver = webdriver.Firefox(executable_path="C:\\Users\\Somerom\\Desktop\\bluethooth\\geckodriver.exe")
 sy_lang = -1
 
 
@@ -42,7 +41,8 @@ def speak(audio):
 def wishMe():
     hour = int(datetime.datetime.now().hour)
     date = datetime.datetime.now().date()
-    os.startfile("C:\Program Files\Rainmeter\Rainmeter.exe")
+    #Change It Accordingly
+    os.startfile("C:\Program Files\Rainmeter\Rainmeter.exe") 
     speak("Now i am online sir")
     speak("hello! i am Friday sir! a digital asistence ")
     if hour>=0 and hour<12:
@@ -232,7 +232,6 @@ def pic():
 
 
 def friday():
-    #runfile('C:/Users/Somerom/Desktop/python all/tictactoe-master/Tic-Tac-Toe/tic_tac_toe.py', wdir='C:/Users/Somerom/Desktop/python all/tictactoe-master/Tic-Tac-Toe')
 
     dataset = pd.read_csv('email.csv')
     e = dataset.iloc[:,:1]
@@ -250,7 +249,8 @@ def friday():
     ide = ema[2]
     psa = nam[2]    
     speak("starting all system applications")
-    server =  wolframalpha.Client('6KGXV9-7VAY3Q8VWW')
+    #Change It Accordingly from wolframalpha
+    server =  wolframalpha.Client('API-KEY')
 
     q=0
     speak("checking all core processes")
@@ -290,6 +290,7 @@ def friday():
         elif 'note' in query or 'লিখে রাখো' in query:
             tem_note = ""
             count_it = 0
+            #Change It Accordingly
             os.startfile("C:\\Users\\Somerom\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Notepad")
             pyautogui.moveTo(10,10)
             pyautogui.click()
@@ -325,6 +326,7 @@ def friday():
                 speak("apni kee dahktaa chan ?")
             rec = takeCommand().lower()
             if "yes" in rec or "হাঁ" in rec:
+                #Change It Accordingly
                 os.startfile("C:\\Users\\Somerom\\Desktop\\python all\\hand\\Demo_screenshot.jpg")
             else:
                 speak("ok sir")
@@ -375,13 +377,17 @@ def friday():
             print("Comming soon")
 
         elif 'open firefox' in query or "ফায়ারফক্স" in query:
+            #Change It Accordingly
             codePath = "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe"
             os.startfile(codePath)
             
         elif 'open visual' in query or "ভিজুয়াল স্টুডিও" in query:
+            #Change It Accordingly
             codePath = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\IDE\\devenv.exe"
             os.startfile(codePath)
+            
         elif 'open mysql' in query or "মাইএসকিউএল" in query:   
+            #Change It Accordingly
             codePath = "C:\Program Files\MySQL\MySQL Workbench 8.0 CE\MySQLWorkbench.exe"
             os.startfile(codePath)
             
@@ -453,7 +459,8 @@ def friday():
 
         elif "am bored" in query or "am getting bored" in query or "game" in query or "আমার ভালোলাগছেনা" in query:
             speak("Let's play a game!")
-            try:                
+            try:  
+                #Change It Accordingly, it is configured for syder
                 runfile('C:/Users/Somerom/Desktop/python all/tictactoe-master/Tic-Tac-Toe/tic_tac_toe.py', wdir='C:/Users/Somerom/Desktop/python all/tictactoe-master/Tic-Tac-Toe')
             except:
                 speak("Try again")
@@ -558,6 +565,7 @@ def friday():
                 speak("sorry i am not able to send sms right now the server is busy! Please Try after some time! sir")
                 
         elif 'open whatsapp' in query or "হোয়াটসঅ্যাপ" in query:
+             #Change It Accordingly
              driver = webdriver.Firefox(executable_path="C:\\Users\\Somerom\\Desktop\\bluethooth\\geckodriver.exe")
              driver.get('https://web.whatsapp.com/')
              if (sy_lang==0):
@@ -593,10 +601,12 @@ def friday():
                  name_wp = person_list[j]
                  user_wp = driver.find_element_by_xpath('//span[@title = "{}"]'.format(name_wp))
                  user_wp.click()
+                 #Change It Accordingly
                  msg_box = driver.find_element_by_class_name('_3u328')
                  
                  for i in range(count):
                      msg_box.send_keys(msg_wp)
+                     #Change It Accordingly
                      button = driver.find_element_by_class_name('_3M-N-')
                      button.click()
 
@@ -606,6 +616,7 @@ def friday():
                     
                 usre = ide
                 paw = psa
+                #Change It Accordingly
                 driver = webdriver.Firefox(executable_path="C:\\Users\\Somerom\\Desktop\\bluethooth\\geckodriver.exe")
                 driver.get("https://www.facebook.com/")
                 usre_box = driver.find_element_by_id('email')
@@ -626,6 +637,7 @@ def friday():
             try:
                 usr = ide
                 psw = psa
+                #Change It Accordingly
                 driver = webdriver.Firefox(executable_path="C:\\Users\\Somerom\\Desktop\\bluethooth\\geckodriver.exe")
                 driver.get("https://www.twitter.com/login")
                 driver.implicitly_wait(1)
@@ -647,6 +659,7 @@ def friday():
         
         elif 'add logo' in query or '' in query:
             speak("it is the picture before adding logo ")
+            #Change It Accordingly
             os.startfile("C:\\Users\\Somerom\\Desktop\\python all\\hand\\Demo_screenshot.jpg")
             im = Image.open('Demo_screenshots.jpg')   
             
@@ -656,6 +669,7 @@ def friday():
             drawe.text((1530,950),"Copyright @Someron",fill="gray",font = afront) 
             im.save("test.jpg")
             speak("it is the picture after adding logo")
+            #Change It Accordingly
             os.startfile("C:\\Users\\Somerom\\Desktop\\python all\\hand\\test.jpg")
 
             #        elif '' in query:
@@ -668,6 +682,7 @@ def friday():
             
         elif "draw" in query or "আকো" in query:
             dig = random.randint(0,1)
+            #Change It Accordingly
             os.startfile("C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Paint")
             time.sleep(2)
             if (dig==0):
@@ -758,7 +773,8 @@ def friday():
             
             
         elif 'open bulk email list' in query or "ইমেল দেখাও" in query:
-            try:           
+            try:      
+                #Change It Accordingly
                 os.startfile("C:\\Users\\Somerom\\Desktop\\python all\\hand\\email.csv")
             except Exception as e:
                 print(e)
